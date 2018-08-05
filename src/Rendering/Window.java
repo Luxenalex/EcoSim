@@ -9,8 +9,8 @@ import java.awt.image.DataBuffer;
 
 public class Window {
 
-    private int WIDTH = 320;
-    private int HEIGHT = 240;
+    private int WIDTH = 860;
+    private int HEIGHT = 640;
     private String TITLE;
 
     private JFrame frame;
@@ -27,7 +27,6 @@ public class Window {
         );
 
         createCanvas();
-        createFrame();
 
         bufferStrategy = canvas.getBufferStrategy();
         graphics = bufferStrategy.getDrawGraphics();
@@ -40,6 +39,7 @@ public class Window {
         canvas.setSize(dimension);
         canvas.setMaximumSize(dimension);
         canvas.setMaximumSize(dimension);
+        createFrame();
         canvas.createBufferStrategy(3);
     }
 

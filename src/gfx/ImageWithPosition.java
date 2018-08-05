@@ -2,8 +2,6 @@ package gfx;
 
 import Utility.Position;
 
-import java.awt.*;
-
 public class ImageWithPosition {
 
     Image image;
@@ -11,6 +9,22 @@ public class ImageWithPosition {
 
     public ImageWithPosition(Image image, Position position){
         this.image = image;
+        this.position = position;
+    }
+
+    public Image getImage() {
+        return image;
+    }
+
+    public void setImage(Image image) {
+        this.image = image;
+    }
+
+    public Position getPosition() {
+        return position;
+    }
+
+    public void setPosition(Position position) {
         this.position = position;
     }
 }
