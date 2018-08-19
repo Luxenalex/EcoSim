@@ -32,6 +32,19 @@ public class Window {
         graphics = bufferStrategy.getDrawGraphics();
     }
 
+    public Window(int width, int height){
+        image = new BufferedImage(
+                width,
+                height,
+                BufferedImage.TYPE_INT_RGB
+        );
+
+        createCanvas();
+
+        bufferStrategy = canvas.getBufferStrategy();
+        graphics = bufferStrategy.getDrawGraphics();
+    }
+
     private void createCanvas() {
 
         canvas = new Canvas();

@@ -53,6 +53,8 @@ public class SimulationRunner implements Runnable{
             timeManager.updateTime();
             frameTime += timeManager.getPassedTime();
 
+
+
             while(timeManager.shouldUpdate(TIME_STEP)){
                 timeManager.decrementUnprocessedTime(TIME_STEP);
                 render = true;
@@ -69,6 +71,7 @@ public class SimulationRunner implements Runnable{
             if(render){
                 renderer.clear();
                 simulation.render(this, renderer);
+                renderer.drawImages();
                 window.update();
                 frames++;
             }
